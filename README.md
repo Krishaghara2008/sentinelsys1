@@ -42,67 +42,36 @@ sentinelsys/
 
 ## Running it
 
-### Backend
+## Running it
 
-```bash
 ### Backend
-
-```
 cd backend
 python -m venv .venv
-```
 
 Activate the virtual environment (optional but recommended):
 
-```
-# Windows (PowerShell)
+**Windows (PowerShell)**
 .venv\Scripts\Activate.ps1
-
-# macOS / Linux
+**macOS / Linux**
 source .venv/bin/activate
-```
-
 Then install dependencies and run:
-
-```
 pip install -r requirements.txt
 python -m uvicorn main:app --reload
-```
 
 The API comes up at `http://localhost:8000`. Interactive docs at `http://localhost:8000/docs`.
 
 ### Frontend
-
-
-
-```
 cd frontend
 npm install
-```
-
 Copy the environment file:
 
-```
-# Windows (PowerShell)
+**Windows (PowerShell)**
 copy .env.example .env
-
-# macOS / Linux
+**macOS / Linux**
 cp .env.example .env
-```
-
 Then run:
-
-```
 npm run dev
-```
-
-Defaults to `VITE_API_URL=http://localhost:8000`.
-
-## Prerequisites
-
-- Python 3.10+
-- Node.js 18+
-- Git
+Defaults to `VITE_API_URL=http://localhost:8000`. Open the URL Vite prints (usually `http://localhost:5173`).
 
 Run both at once and the dashboard will show **API: Connected** in the header and light up
 with live data as soon as you click **Analyze System**.
