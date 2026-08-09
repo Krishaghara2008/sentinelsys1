@@ -153,4 +153,4 @@ Response includes `maintenance_priority`, `health_index`, `risk_level`, `status`
 - If the backend is unreachable, the UI shows a clear connection error — it never silently
   falls back to fake data.
 - Verified end-to-end: feeding the notebook's own example telemetry through the API reproduces
-  `Maintenance Priority: 84.12`, `Health Index: 15.88%`, `Risk: High` exactly.
+  `Maintenance Priority: 84.12`, `Health Index: 15.88%`, `Risk: High` exactly.git pull
