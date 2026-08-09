@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+data/history.db
+__pycache__/
+*.pyc
+.DS_Store

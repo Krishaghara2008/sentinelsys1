@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-void text-ink font-body antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(45, 217, 232, 0.07), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(139, 124, 246, 0.06), transparent);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(45, 217, 232, 0.25);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e2733 transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #1e2733;
+  border-radius: 8px;
+}
+
+/* visible keyboard focus, kept subtle but real */
+:focus-visible {
+  outline: 2px solid #2dd9e8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom range slider thumb (telemetry inputs) */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #e7edf4;
+  border: 3px solid #2dd9e8;
+  box-shadow: 0 0 8px rgba(45, 217, 232, 0.6);
+  cursor: pointer;
+  margin-top: 0;
+}
+.range-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #e7edf4;
+  border: 3px solid #2dd9e8;
+  box-shadow: 0 0 8px rgba(45, 217, 232, 0.6);
+  cursor: pointer;
+}
+.range-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: transparent;
+}
+.range-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: transparent;
+}
