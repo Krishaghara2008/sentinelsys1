@@ -1,7 +1,8 @@
 node_modules/
 dist/
 .env
-backend/data/history.db
+backend/data/
 __pycache__/
 *.pyc
 .DS_Store
+.venv/
